@@ -1,0 +1,1218 @@
+1.	Write a Java program to create a new array list, add some colors (string) and print out the collection.
+
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        ArrayList<String> colorsList = new ArrayList<>();
+
+        
+        colorsList.add("Red");
+        colorsList.add("Blue");
+        colorsList.add("Green");
+        colorsList.add("Yellow");
+        colorsList.add("Purple");
+
+        
+        System.out.println("Colors in the ArrayList:");
+        for (String color : colorsList) {
+            System.out.println(color);
+        }
+    }
+}
+
+2.	Write a Java program to insert an element into the array list at the first position.
+
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        ArrayList<String> colorsList = new ArrayList<>();
+
+        colorsList.add("Blue");
+        colorsList.add("Green");
+        colorsList.add("Yellow");
+        colorsList.add("Purple");
+
+        colorsList.add(0, "Red");
+
+
+        System.out.println("Colors in the ArrayList:");
+        for (String color : colorsList) {
+            System.out.println(color);
+        }
+    }
+}
+
+3.	Write a Java program to retrieve an element (at a specified index) from a given array list.
+
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> colorsList = new ArrayList<>();
+
+        
+        colorsList.add("Red");
+        colorsList.add("Blue");
+        colorsList.add("Green");
+        colorsList.add("Yellow");
+        colorsList.add("Purple");
+
+        int index = 2; // Index of the element to retrieve
+        String color = colorsList.get(index);
+
+        System.out.println("Element at index " + index + ": " + color);
+    }
+}
+
+4.	Write a Java program to sort a given array list.
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> colorsList = new ArrayList<>();
+
+        
+        colorsList.add("Red");
+        colorsList.add("Blue");
+        colorsList.add("Green");
+        colorsList.add("Yellow");
+        colorsList.add("Purple");
+
+        
+        Collections.sort(colorsList);
+
+        
+        System.out.println("Sorted Colors:");
+        for (String color : colorsList) {
+            System.out.println(color);
+        }
+    }
+}
+
+
+5.	 
+Write a Java program to reverse elements in a array list.
+
+
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> colorsList = new ArrayList<>();
+
+        
+        colorsList.add("Red");
+        colorsList.add("Blue");
+        colorsList.add("Green");
+        colorsList.add("Yellow");
+        colorsList.add("Purple");
+
+        
+        System.out.println("Original List:");
+        for (String color : colorsList) {
+            System.out.println(color);
+        }
+
+        
+        Collections.reverse(colorsList);
+
+        
+        System.out.println("\nReversed List:");
+        for (String color : colorsList) {
+            System.out.println(color);
+        }
+    }
+}
+
+6.	Write a Java program of swap two elements in an array list.
+
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        ArrayList<String> colorsList = new ArrayList<>();
+
+        
+        colorsList.add("Red");
+        colorsList.add("Blue");
+        colorsList.add("Green");
+        colorsList.add("Yellow");
+        colorsList.add("Purple");
+
+        
+        System.out.println("Original List:");
+        for (String color : colorsList) {
+            System.out.println(color);
+        }
+
+        
+        int index1 = 1; // Index of the first element to swap
+        int index2 = 3; // Index of the second element to swap
+
+        String temp = colorsList.get(index1);
+        colorsList.set(index1, colorsList.get(index2));
+        colorsList.set(index2, temp);
+
+        
+        System.out.println("\nList after swapping elements:");
+        for (String color : colorsList) {
+            System.out.println(color);
+        }
+    }
+}
+
+7.	Write a Java program to print all the elements of a ArrayList using the position of the elements.
+
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        ArrayList<String> colorsList = new ArrayList<>();
+
+        
+        colorsList.add("Red");
+        colorsList.add("Blue");
+        colorsList.add("Green");
+        colorsList.add("Yellow");
+        colorsList.add("Purple");
+
+        
+        System.out.println("Elements of the ArrayList with their positions:");
+        for (int i = 0; i < colorsList.size(); i++) {
+            System.out.println("Position " + i + ": " + colorsList.get(i));
+        }
+    }
+}
+
+8.	Write a Java program to append the specified element to the end of a linked list.
+
+import java.util.LinkedList;
+
+public class Main {
+    public static void main(String[] args) {
+       
+        LinkedList<String> colorsList = new LinkedList<>();
+
+        
+        colorsList.add("Red");
+        colorsList.add("Blue");
+        colorsList.add("Green");
+        colorsList.add("Yellow");
+        colorsList.add("Purple");
+
+        System.out.println("Original List:");
+        System.out.println(colorsList);
+
+        String newColor = "Orange";
+        colorsList.add(newColor);
+
+        System.out.println("\nList after appending '" + newColor + "':");
+        System.out.println(colorsList);
+    }
+}
+
+9.	Write a Java program to insert the specified element at the specified position in the linked list.
+10.	Write a Java program to insert elements into the linked list at the first and last position.
+
+import java.util.LinkedList;
+
+public class Main {
+    public static void main(String[] args) {
+    
+        LinkedList<String> colorsList = new LinkedList<>();
+
+        
+        colorsList.add("Blue");
+        colorsList.add("Green");
+
+        
+        System.out.println("Original List:");
+        System.out.println(colorsList);
+
+        
+        String firstColor = "Red";
+        colorsList.addFirst(firstColor);
+
+        
+        String lastColor = "Yellow";
+        colorsList.addLast(lastColor);
+
+        System.out.println("\nList after inserting '" + firstColor + "' at the first position and '" +
+                           lastColor + "' at the last position:");
+        System.out.println(colorsList);
+    }
+}
+
+11.	Write a Java program to display the elements and their positions in a linked list. 
+
+import java.util.LinkedList;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        LinkedList<String> colorsList = new LinkedList<>();
+
+       
+        colorsList.add("Red");
+        colorsList.add("Blue");
+        colorsList.add("Green");
+        colorsList.add("Yellow");
+        colorsList.add("Purple");
+
+        
+        System.out.println("Elements and their positions in the LinkedList:");
+        for (int i = 0; i < colorsList.size(); i++) {
+            System.out.println("Position " + i + ": " + colorsList.get(i));
+        }
+    }
+}
+
+12.	 Write a Java program to check if a particular element exists in a linked list.
+
+import java.util.LinkedList;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        LinkedList<String> colorsList = new LinkedList<>();
+
+        
+        colorsList.add("Red");
+        colorsList.add("Blue");
+        colorsList.add("Green");
+        colorsList.add("Yellow");
+        colorsList.add("Purple");
+
+        
+        String targetElement = "Green";
+
+        
+        boolean exists = false;
+        for (String color : colorsList) {
+            if (color.equals(targetElement)) {
+                exists = true;
+                break;
+            }
+        }
+
+        
+        if (exists) {
+            System.out.println("The element '" + targetElement + "' exists in the LinkedList.");
+        } else {
+            System.out.println("The element '" + targetElement + "' does not exist in the LinkedList.");
+        }
+    }
+}
+
+13.	 Write a Java program to compare two linked lists.
+
+import java.util.LinkedList;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        LinkedList<String> list1 = new LinkedList<>();
+        list1.add("Red");
+        list1.add("Blue");
+        list1.add("Green");
+
+        
+        LinkedList<String> list2 = new LinkedList<>();
+        list2.add("Red");
+        list2.add("Blue");
+        list2.add("Green");
+
+        
+        boolean areEqual = true;
+        if (list1.size() != list2.size()) {
+            areEqual = false;
+        } else {
+            for (int i = 0; i < list1.size(); i++) {
+                if (!list1.get(i).equals(list2.get(i))) {
+                    areEqual = false;
+                    break;
+                }
+            }
+        }
+
+     
+        if (areEqual) {
+            System.out.println("The two LinkedLists are equal.");
+        } else {
+            System.out.println("The two LinkedLists are not equal.");
+        }
+    }
+}
+
+14.	Write a Java program to replace an element in a linked list.
+
+import java.util.*;
+
+public class ReplaceElementInLinkedList {
+    public static void main(String[] args) {
+       
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.add(1);
+        linkedList.add(2);
+        linkedList.add(3);
+        linkedList.add(4);
+        linkedList.add(5);
+
+       
+        System.out.println("Original Linked List: " + linkedList);
+
+        
+        int indexToReplace = 2;
+        int newValue = 10;
+
+        if (indexToReplace >= 0 && indexToReplace < linkedList.size()) {
+            linkedList.set(indexToReplace, newValue);
+            System.out.println("Element at index " + indexToReplace + " replaced with " + newValue);
+        } else {
+            System.out.println("Invalid index");
+        }
+
+        System.out.println("Modified Linked List: " + linkedList);
+    }
+}
+
+15.	Write a Java program to iterate through all elements in a hash list.
+16.	Write a Java program to empty an hash set.
+
+import java.util.HashSet;
+
+public class EmptyHashSet {
+    public static void main(String[] args) {
+        
+        HashSet<String> hashSet = new HashSet<>();
+
+        
+        hashSet.add("Apple");
+        hashSet.add("Banana");
+        hashSet.add("Orange");
+        hashSet.add("Grapes");
+
+        
+        System.out.println("Original HashSet: " + hashSet);
+
+        // Empty the HashSet
+        hashSet.clear();
+
+        // Print the empty HashSet
+        System.out.println("HashSet after clearing: " + hashSet);
+    }
+}
+
+17.	Write a Java program to convert a hash set to an array.
+
+import java.util.HashSet;
+
+public class HashSetToArray {
+    public static void main(String[] args) {
+        
+        HashSet<String> hashSet = new HashSet<>();
+
+        
+        hashSet.add("Apple");
+        hashSet.add("Banana");
+        hashSet.add("Orange");
+        hashSet.add("Grapes");
+
+        
+        System.out.println("Original HashSet: " + hashSet);
+
+        
+        String[] array = hashSet.toArray(new String[hashSet.size()]);
+
+        
+        System.out.print("Array from HashSet: [");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
+            if (i < array.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+    }
+}
+
+18.	Write a Java program to compare two sets and retain elements which are same on both sets.
+19.	Write a Java program to create a new tree set, add some colors (string) and print out the tree set.
+20.	Write a Java program to find the numbers less than 7 in a tree set. 
+21.	Write a Java program to remove all the elements from a priority queue.
+
+import java.util.PriorityQueue;
+
+public class ClearPriorityQueue {
+    public static void main(String[] args) {
+        
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+
+        
+        priorityQueue.add(5);
+        priorityQueue.add(2);
+        priorityQueue.add(8);
+        priorityQueue.add(1);
+        priorityQueue.add(10);
+
+        
+        System.out.println("Original PriorityQueue: " + priorityQueue);
+
+        
+        priorityQueue.clear();
+
+        System.out.println("PriorityQueue after clearing: " + priorityQueue);
+    }
+}
+
+22.	 Write a Java program to count the number of key-value (size) mappings in a map
+23.	Write a Java program to convert a priority queue to an array containing all of the elements of the queue
+
+import java.util.PriorityQueue;
+
+public class PriorityQueueToArray {
+    public static void main(String[] args) {
+        
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+
+        
+        priorityQueue.add(5);
+        priorityQueue.add(2);
+        priorityQueue.add(8);
+        priorityQueue.add(1);
+        priorityQueue.add(10);
+
+        System.out.println("Original PriorityQueue: " + priorityQueue);
+
+        
+        Integer[] array = priorityQueue.toArray(new Integer[priorityQueue.size()]);
+
+        
+        System.out.print("Array from PriorityQueue: [");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
+            if (i < array.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+    }
+}
+
+
+
+24.	Write a Java program to check whether a map contains key-value mappings (empty) or not
+25.	Write a Java program to get the value of a specified key in a map
+
+
+
+
+PATTERNS.............................................
+
+
+
+
+Logical Coding Question:
+
+1)
+    * 
+   * *
+  *   *
+ *     *
+*********
+
+
+
+public class StarPattern {
+    public static void main(String[] args) {
+        int rows = 5;
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = i; j < rows; j++) {
+                System.out.print(" ");
+            }
+
+            
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                
+                if (k == 1 || k == (2 * i - 1)) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+
+            
+            System.out.println();
+        }
+    }
+}
+
+
+2)
+
+
+*********
+ *     *
+  *   *
+   * *
+    *
+
+
+
+public class StarPattern {
+    public static void main(String[] args) {
+        int rows = 5;
+
+        for (int i = 1; i <= rows; i++) {
+            
+            for (int j = 1; j < i; j++) {
+                System.out.print(" ");
+            }
+
+            
+            for (int k = i; k <= rows; k++) {
+                if (i == 1 || i == rows || k == i || k == rows) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+
+            
+            System.out.println();
+        }
+    }
+}
+
+3)
+
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+11 12 13 14 15 
+
+
+public class NumberPattern {
+    public static void main(String[] args) {
+        int rows = 5;
+        int number = 1;
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(number + " ");
+                number++;
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+4)
+
+             1   
+           1   1
+         1   2   1
+       1   3   3   1
+     1   4   6   4   1
+
+
+
+public class PascalTriangle {
+    public static void main(String[] args) {
+        int rows = 5;
+
+        for (int i = 0; i < rows; i++) {
+            
+            for (int j = 0; j < rows - i; j++) {
+                System.out.print("  ");
+            }
+
+            
+            int number = 1;
+            for (int j = 0; j <= i; j++) {
+                System.out.print(number + "   ");
+                number = number * (i - j) / (j + 1);
+            }
+
+            
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+5)
+
+   1 
+  212
+ 32123
+4321234
+ 32123
+  212
+   1
+
+6)
+
+1 
+2 1 
+3 2 1 
+4 3 2 1 
+5 4 3 2 1
+
+
+
+public class NumberPattern {
+    public static void main(String[] args) {
+        int rows = 5;
+
+        for (int i = 1; i <= rows; i++) {
+            
+            for (int j = i; j >= 1; j--) {
+                System.out.print(j + " ");
+            }
+
+            
+            System.out.println();
+        }
+    }
+}
+
+ 
+
+7)
+
+10101
+01010
+10101
+01010
+10101
+
+
+public class Pattern {
+    public static void main(String[] args) {
+        int rows = 5;
+
+        for (int i = 1; i <= rows; i++) {
+            
+            for (int j = 1; j <= rows; j++) {
+                if ((i + j) % 2 == 0) {
+                    System.out.print("1");
+                } else {
+                    System.out.print("0");
+                }
+            }
+            
+            System.out.println();
+        }
+    }
+}
+
+
+8)
+
+1
+10
+101
+1010
+10101
+
+
+public class Pattern {
+    public static void main(String[] args) {
+        int rows = 5;
+
+        for (int i = 1; i <= rows; i++) {
+            
+            for (int j = 1; j <= i; j++) {
+                if (j % 2 == 0) {
+                    System.out.print("0");
+                } else {
+                    System.out.print("1");
+                }
+            }// Move to the next line
+            System.out.println();
+        }
+    }
+}
+
+ 
+
+9)
+
+1 2 3 4 5 
+ 2 3 4 5 
+  3 4 5 
+   4 5 
+    5 
+   4 5 
+  3 4 5 
+ 2 3 4 5 
+1 2 3 4 5
+
+
+10)
+
+A 
+B B 
+C C C 
+D D D D 
+E E E E E 
+F F F F F F 
+
+
+public class AlphabetPattern {
+    public static void main(String[] args) {
+        char startChar = 'A';
+        int rows = 6; // You want 6 rows, from A to F
+
+        for (int i = 1; i <= rows; i++) {
+           
+            for (int j = 1; j <= i; j++) {
+                System.out.print(startChar + " ");
+            }
+            
+            startChar++;
+            
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+11)
+
+
+A B C D E F 
+A B C D E 
+A B C D 
+A B C 
+A B 
+A 
+A 
+A B 
+A B C 
+A B C D 
+A B C D E 
+A B C D E F
+ 
+
+12)
+
+     A 
+    A B 
+   A B C 
+  A B C D 
+ A B C D E 
+A B C D E F
+
+
+
+public class AlphabetPattern {
+    public static void main(String[] args) {
+        int rows = 6;
+        char startChar = 'A';
+
+        for (int i = 1; i <= rows; i++) {
+           
+            for (int j = 1; j <= rows - i; j++) {
+                System.out.print(" ");
+            }
+
+            
+            for (int k = 1; k <= i; k++) {
+                System.out.print(startChar + " ");
+                startChar++;
+            }
+
+            
+            System.out.println();
+            startChar = 'A';
+        }
+    }
+}
+
+
+
+13)
+
+     A
+    B B
+   C   C
+  D     D
+ E       E
+F         F
+ E       E
+  D     D
+   C   C
+    B B
+     A
+
+
+public class CharacterPattern {
+    public static void main(String[] args) {
+        int rows = 6;
+        char startChar = 'A';
+
+        
+        for (int i = 1; i <= rows; i++) {
+            
+            for (int j = 1; j <= rows - i; j++) {
+                System.out.print(" ");
+            }
+
+            
+            System.out.print(startChar);
+
+            
+            for (int k = 1; k <= 2 * i - 3; k++) {
+                System.out.print(" ");
+            }
+
+            
+            if (i > 1) {
+                System.out.print(startChar);
+            }
+
+            
+            System.out.println();
+
+            
+            startChar++;
+        }
+
+        
+        for (int i = rows - 1; i >= 1; i--) {
+            
+            for (int j = 1; j <= rows - i; j++) {
+                System.out.print(" ");
+            }
+
+            
+            System.out.print(startChar);
+
+            /
+ 
+
+15)
+
+1 2 3 4 5 6 
+ 2 3 4 5 6 
+  3 4 5 6 
+   4 5 6 
+    5 6 
+     6 
+
+
+public class NumberPattern {
+    public static void main(String[] args) {
+        int rows = 6;
+
+        for (int i = 1; i <= rows; i++) {
+            
+            for (int j = 1; j < i; j++) {
+                System.out.print(" ");
+            }
+            
+            for (int k = i; k <= rows; k++) {
+                System.out.print(k + " ");
+            }
+            
+            System.out.println();
+        }
+    }
+}
+
+
+16) Printing Christmas Tree Using Pyramid
+
+                         *
+                        * * 
+                       * * * 
+                      * * * * 
+                     * * * * * 
+                       * * * 
+                      * * * * 
+                     * * * * * 
+                    * * * * * * 
+                   * * * * * * * 
+                     * * * * * 
+                    * * * * * * 
+                   * * * * * * * 
+                  * * * * * * * * 
+                 * * * * * * * * * 
+                   * * * * * * * 
+                  * * * * * * * * 
+                 * * * * * * * * * 
+                * * * * * * * * * * 
+               * * * * * * * * * * * 
+                 * * * * * * * * * 
+                * * * * * * * * * * 
+               * * * * * * * * * * * 
+              * * * * * * * * * * * * 
+             * * * * * * * * * * * * * 
+                      * * * * 
+                      * * * * 
+                      * * * * 
+                      * * * * 
+17)
+
+
+* 
+
+* * 
+
+* * * 
+
+* * * * 
+
+* * * * * 
+
+* * * * 
+
+* * * 
+
+* * 
+
+* 
+
+
+18)
+
+7
+7 6 
+7 6 5
+7 6 5 4
+7 6 5 4 3
+7 6 5 4 3 2 
+7 6 5 4 3 2 1
+
+
+public class NumberPattern {
+    public static void main(String[] args) {
+        int rows = 7;
+
+        for (int i = 1; i <= rows; i++) {
+            int number = 7;
+            
+            for (int j = 1; j <= i; j++) {
+                System.out.print(number + " ");
+                number--;
+            }
+            
+            System.out.println();
+        }
+    }
+}
+
+
+19)
+
+1
+1 2 1
+1 2 3 2 1
+1 2 3 4 3 2 1
+1 2 3 4 5 4 3 2 1
+1 2 3 4 5 6 5 4 3 2 1
+1 2 3 4 5 6 7 6 5 4 3 2 1
+
+20)
+
+1234567
+  234567
+    34567
+      4567
+        567
+          67
+            7
+          67
+        567
+      4567
+    34567
+  234567
+1234567
+
+
+
+
+
+21)
+
+1
+10
+101
+1010
+10101
+101010 
+1010101
+
+
+public class NumberPattern {
+    public static void main(String[] args) {
+        int rows = 7;
+
+        for (int i = 1; i <= rows; i++) {
+            
+            for (int j = 1; j <= i; j++) {
+                if (j % 2 == 1) {
+                    System.out.print("1");
+                } else {
+                    System.out.print("0");
+                }
+            }
+            
+            System.out.println();
+        }
+    }
+}
+
+
+
+22)
+
+
+1111111
+1111122
+1111333
+1114444
+1155555
+1666666
+7777777 
+
+
+public class NumberPattern {
+    public static void main(String[] args) {
+        int rows = 7;
+
+        for (int i = 1; i <= rows; i++) {
+            
+            for (int j = 1; j <= i; j++) {
+                System.out.print(i);
+            }
+            
+            for (int k = i + 1; k <= rows; k++) {
+                System.out.print(k);
+            }
+            
+            System.out.println();
+        }
+    }
+}
+
+
+23)
+1010101
+0101010
+1010101
+0101010
+1010101
+0101010
+1010101
+
+
+public class NumberPattern {
+    public static void main(String[] args) {
+        int rows = 7;
+
+        for (int i = 1; i <= rows; i++) {
+            
+            for (int j = 1; j <= rows; j++) {
+                if ((i + j) % 2 == 0) {
+                    System.out.print("1");
+                } else {
+                    System.out.print("0");
+                }
+            }
+            
+            System.out.println();
+        }
+    }
+}
+
+
+24)
+
+1
+2 6
+3 7 10 
+4 8 11 13
+5 9 12 14 15
+
+public class NumberPattern {
+    public static void main(String[] args) {
+        int rows = 5;
+        int currentNumber = 1;
+
+        for (int i = 1; i <= rows; i++) {
+            int nextNumber = currentNumber;
+            
+            for (int j = 1; j <= i; j++) {
+                System.out.print(nextNumber + " ");
+                nextNumber += rows - j;
+            }
+            
+            System.out.println();
+            currentNumber++;
+        }
+    }
+}
+
+
+25)
+
+1 2 3 4 5 6 7
+2 3 4 5 6 7 1
+3 4 5 6 7 1 2
+4 5 6 7 1 2 3
+5 6 7 1 2 3 4
+6 7 1 2 3 4 5
+7 1 2 3 4 5 6
+
+
+public class NumberPattern {
+    public static void main(String[] args) {
+        int rows = 7;
+
+        
+        for (int i = 0; i < rows; i++) {
+            int number = i + 1;
+
+            
+            for (int j = 0; j < rows; j++) {
+                
+                System.out.print(number + " ");
+                number++;
+                if (number > rows) {
+                    number = 1;
+                }
+            }
+           
+            System.out.println();
+        }
+    }
+}
+
+ 
+
+
+
+
+
+
+
