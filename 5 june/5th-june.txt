@@ -1,0 +1,134 @@
+Naming convention for packages:
+
+www.productcrud.com
+
+reverse of the domain name will be the package name
+
+com.productapp.utility
+
+com.productapp.dao
+
+com.productapp.daoimpl
+
+
+
+PreparedStatement:
+
+insert query has to be executed 100 times
+100 different rows
+
+Statement:
+
+for(){ // 100 iterations
+   stmt.executeUpdate(qry); 0.2 sec 
+}
+
+1st time -> statement will send qry to db -> db will compile -> execution 
+2nd time -> 
+
+Prepared Statement will not compile the query again and again,
+it will compile query only once and later it will use this prepared query for execution
+
+Web application:
+Static Web: 
+Dynamic Web: 
+
+An app that interacts with the user or sends the different data for different users
+
+HTML
+CSS
+JS
+
+To develop dynamic web applications using JAVA, Servlet and JSP are there
+
+
+Servlet : Is a java program running on a server, A Servlet is capable of listening to the requests, processing the request, and generating the response.
+
+Apache Tomcat
+
+Every server has a component Servlet Container, that is responsible for servlet execution
+
+First of all every server will take index.html index.jsp file as the welcome file
+
+However we can make our own html file as the welcome file using certain configuration
+We can perform configurations related to the project (url mappings, welcome file, session timeout )
+into an XML file
+Java people has already defined the tags for each configuration
+Place configuration XML file into web-inf
+
+this Configuration XML file is termed as Standard deployment descriptor
+
+web.xml
+
+Before starting the execution, server will read web.xml file
+
+
+
+Ways of creating web.xml:
+1. Manually creating a new file
+2. Eclipse can generate this file
+   a. At the time of project creation
+   b. After project has been created
+
+
+Steps for creating a Servlet:
+
+1. We have to create a class for servlet
+2. Inherit HttpServlet 
+
+javax.servlet -> Servlet version 4
+jakarta.servlet -> Servlet version >= 5
+
+class MyServlet extends HttpServlet{
+
+
+}
+
+download suitable jar file for servlet package based on the version
+add that jar file into the dynamic web project
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
