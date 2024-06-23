@@ -1,0 +1,132 @@
+Spring AOP: Aspect Oriented Programming
+
+AOP: it is introduced to enhance the modularity 
+
+Modularity
+
+user-registration
+
+
+public void registerUser(){
+        notification()
+	sendEmail()
+	validation()
+	//main business logic 10 lines 
+	sendEmail()
+}
+
+public void updateUser(){
+	// notification 3 lines
+	// validations 4 lines
+	// send an email 4 lines
+
+	// main business logic 15 lines code 
+	// confirmation email 4 lines
+
+}
+
+20 methods
+
+class Helper{
+
+	@Before(expression)
+	public void notification(){
+
+	}
+
+	public void sendEmail(){
+		
+	}
+
+	public void validation(){
+
+	}
+
+}
+
+
+1. send notification
+2. Validations
+3. send an email
+4. confirmation email
+
+For spring AOP, we need to identify the business logic and other statements
+Cross cutting concerns: extra statements for performing any task other than the business logic is 
+CCC
+
+public void registerUser(){
+        	//main business logic 10 lines 
+	
+}
+
+public void updateUser(){
+		// main business logic 15 lines code 
+	
+
+}
+
+
+According to AOP, we need to separate ccc and the business logic 
+We don't need to call these ccc methods manually
+AOP will call these ccc methods where you want to call them
+but somewhere we have to mention that these methods should be call where and when by certain configurations (xml OR annotations)
+
+
+Terminology for AOP:
+
+Join Point: is any point in program to which ccc should be linked
+		for eg: method execution, exception 
+
+Advice: represents the ccc should be called when and where
+        an action taken by ccc 
+	PointCut is an expression to specify join point
+	
+	Before advice, after advice, around advice, after throwing 
+	
+	@Before
+Aspect: aspect is a class containing all the ccc 
+
+execution(public void operate())
+It will call ccc for every public void operate()
+
+execution(public void Operations.operate())
+It will call ccc for public void operate() which is in Operations class
+
+execution(public * *(..))
+It will call ccc for all the public methods in the application
+
+execution(public * Operations.*(..))
+It will call ccc for all the public methods on Operations class
+
+
+execution(* Operations.*(..))
+pick all the methods in Operations class
+
+
+Product
+
+execution(public Product.set*(..))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
