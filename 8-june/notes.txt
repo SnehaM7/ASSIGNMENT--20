@@ -1,0 +1,68 @@
+Two ways to manage session:
+1. HttpSession class
+2. Cookies: text files stored in the browser's memory
+             We can use cookies to enrich the user experience like we can store user's search query to shoe advts, or to store username and password, or form data 
+
+             Cookies can also be used for managing the session
+		
+             
+1. User will provide username and password
+2. Request will be sent to LoginServlet
+3. LoginServlet will compare username and password
+4. If credentials matched:
+	Create a cookie
+	Store some data into it
+        Send cookie in the response
+    
+HttpSession and Cookies
+
+
+
+JSP: Java Server Pages
+
+
+In Servlets whenever it is required to have html we are calling print/println method
+on printwriter reference we need to write tags inside a string only
+Java Code -> html code
+
+JSP overcomes the above drawback, in JSP file we can write java code and html code freely
+HTML Code -> JAVA Code 
+
+JSP is compiled into servlet at the execution time and Servlet will be executed only
+
+How to write java code in JSP:
+JSP is providing few tags:
+
+1. declaration tag <%! %> : it is used to declare variables 
+			<%! int a,b; %>
+2. scriptlet tag 
+
+3. expression tag
+
+4. directives tag
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,168 @@
+Spring framework:
+
+Framework provides a pre-defined architecture, design-pattern, packages, classes, interface, methods
+
+
+Spring framework:
+Desktop app, web app, rest-apis
+
+
+Why we need Spring ?
+
+
+class EmployeeServiceImpl{
+	
+   private EmployeeDAOImpl daoImpl = new EmployeeDAOImpl();
+}
+
+EmployeeServiceImpl has a dependency on EmployeeDAOImpl
+
+dependency-> 
+Maven -> jar files
+Spring -> object
+
+
+class Car{
+	int id;
+	String name;
+	String brand;
+        Engine engine;
+	Car(){
+		engine = ;
+	}
+}
+
+interface Engine{
+}
+class DieselEngine implements Engine{
+	int capacity;
+	int power;
+	int torque;
+}
+class PetrolEngine implements Engine{
+	int capacity;
+	int power;
+	int torque;
+}
+
+
+engine object is now dependency for the car object
+
+
+class Laptop{
+	int id;
+        String brand;
+	String name;
+	SeagateHdd hdd = new SeagateHdd();
+}
+
+
+class SamsungHdd{
+	int id;
+	int size;
+	int clockSpeed;
+
+}
+
+class SeagateHdd{
+
+
+}
+
+Types of coupling:
+1. tight coupling: hardcoded objects 
+		   Drawbacks of tight coupling:
+                   a. Maintenance of code will become costly
+                   b. Testing of individual component now is not possible with tight coupling
+
+2. loose coupling: objects should not be dependent directly on to a fix type
+                   we don't need to create hard coded objects 
+                   Spring framework now will inject the dependencies
+                   
+
+Dependency
+Dependency Injection: In order to achieve loose coupling we will avoid hard coded objects for our own entities, now spring container will inject the required dependencies 
+
+Spring container is a component into spring framework that will create a dependency object and from
+spring container only, will now inject the dependency
+
+
+
+Somewhere we need to configure, what dependency do we need 
+for eg: configure dependency for either PetrolEngine or DieselEngine
+We need to do this config into XML file
+
+Using spring, we have inverted the flow of object creation
+
+IOC : Inversion of Control
+Spring IOC Container 
+
+Spring is consisting of multiple frameworks/modules:
+Spring core
+Spring MVC
+SpringJDBC
+Spring Boot -> Spring MVC
+Spring Security
+
+Types of configurations in spring:
+1. XML based
+2. Annotation based: XML file will be there but we will not put bean tags, instead of bean tag we have to write a config that we are having annotation
+3. Java based configuration: Each and Every config will be handled by java class, no use of xml file 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

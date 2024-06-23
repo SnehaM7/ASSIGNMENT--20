@@ -1,0 +1,41 @@
+LoginServlet
+login.html
+
+login.jsp -> LoginServlet -> comparison -> if credentials are invalid -> response.sendRedirect("login.jsp")
+
+if we want to send some dynamic content onto any servlet or jsp 
+
+RequestDispatcher
+
+
+MVC:
+Model : Entity class, Java Bean  class : Represents the data
+View : Frontend code: JSP
+Controller : Responsible for processing Request and generating Response: Servlet
+Service: Service ServiceImpl 
+DAO: DAO DAOImpl
+Util: 
+
+
+calculating factorial and store the result into db
+JSP: form
+Controller: Servlet -> read the number from request 
+
+Service: Business logic : execute a loop and it will pass the result to DAO layer
+
+
+User -> View -> Controller -> Service -> DAO -> Database
+
+
+
+
+
+
+
+
+
+
+
+
+
+

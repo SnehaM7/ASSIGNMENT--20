@@ -1,0 +1,84 @@
+JSP: Java Server Pages
+
+declaration tag
+scriptlet tag
+expression tag
+directive
+
+
+JSTL Tag library: Provides few pre-defined tags to simplify the JSP development
+
+We need to add required jar files that contains the jstl api and jstl implementation
+
+WEB_INF/lib
+
+Tomcat 10.1 Jakarta -> jakarta.servlet.jsp.jstl-api-3.0.0 (2).jar
+		        https://mvnrepository.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api/3.0.0
+                       jakarta.servlet.jsp.jstl-3.0.1 (1).jar  -> implementation
+                       https://mvnrepository.com/artifact/org.glassfish.web/jakarta.servlet.jsp.jstl/3.0.1
+
+Tomcat 7 8 9 javax.servlet jstl 1.2 (javax.servlet)
+
+
+Java EE Oracle -> Eclipse foundation
+
+
+Types of JSTL tag:
+1. jstl core tags: tags to display the data, to handle conditional rendering, to perform iterations, 
+2. jstl function tags: tags to perform string manipulations
+3. jstl formatting tags: 2024-06-10 10/06/2024  10 June 2024 
+4. jstl sql tags: tags to perform jdbc operations
+
+
+In order to use these jstl tags we must provide the uri for the tag library, each type of JSTL tag is having its own uri for tag library
+
+Tomcat 10.1 -> jakarta.tags.core
+               Jakarta.tags.functions
+
+Tomcat 7 8 9 -> http://java.sun.com/jsp/jstl/core
+                http://java.sun.com/jsp/jstl/functions
+
+
+How to provide uri for tag library:
+In jsp we have to use a directive
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="Jakarta.tags.core" prefix="c" %>
+<%@ taglib uri="Jakarta.tags.functions" prefix="fn" %>
+
+after adding the above taglib directive we can now use the tags
+
+we need a prefix for writing jstl tags
+
+<%= %>
+
+<prefix:tag-name>
+
+<c:out> : used to display the data
+<c:set> : used to set the data, declare the variable
+<c:if> : used for conditional rendering
+<c:choose>, <c:when>, <c:otherwise>
+
+<c:choose>
+	<c:when></c:when>
+	<c:when></c:when>
+	<c:when></c:when>
+	<c:otherwise></c:otherwise>
+</c:choose>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

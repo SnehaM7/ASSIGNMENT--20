@@ -1,0 +1,164 @@
+Maven: Maven is a build tool 
+
+Maven is project management tool
+
+jdbc -> mysql-connector
+servlets-> servlet-api
+           jstl
+
+
+20 jar files
+
+Jar files required for any Java Application are referred as dependencies
+
+Maven downloads all the required jar files from remote repo i.e. mvnrepository
+
+Group Id : this is an identifier for the group/organization who is developing this project
+           mytechsoft.com
+	   com.mytechsoft
+
+Artifact Id: name of the project, myshop
+
+archetype of the project: template for a java project
+                          template will provide specific folder structure
+
+packages: combine group id and artifact id
+
+com.mytechsoft.myshop.models
+com.mytechsoft.myshop.controller
+
+
+
+package.json-> meta data , version, author, license, dependencies
+
+pom.xml -> Project Object Model
+
+For the 1st first time dependencies will be download from remote repo only
+after downloading it will create a local repo
+and next time maven will look for existing dependencies into local repo
+
+Hibernate: Hibernate is an ORM (Object Relational Mapper)
+
+Java Application -> object -> Java
+Database -> tables-> row & columns -> SQL 
+
+JDBC 
+
+Hibernate:
+-> don't create tables manually
+-> don't create and close connections to db manually 
+-> don't write jdbc steps
+-> don't need to write query also
+
+Application-> Student class,
+Database -> Student table
+
+Entity class -> Table 
+Class attributes -> table columns/fields
+Entity object -> row of the table
+
+Hibernate follows JPA standards
+JPA-> Java Persistence API has defined certain rules, guidelines, how an ORM should behave
+
+Hibernate is an implementation for JPA
+
+
+In hibernate we have to create an xml file for containing all the db related configs
+eg: config for db url, db username, password, driver class path 
+
+Standard name for config file: hibernate.cfg.xml
+
+If we have given this standard name then hibernate can automatically detect this file
+
+If we have given a certain different name to this config file, then we have to inform hibernate
+the name of our file
+
+XMl DTD: Data type definition
+DTD will contain the definition for all the hibernate config tags
+
+Product p = new Product(……..); 
+
+save(p)
+
+save() of hibernate should be called on the hibernate session object
+
+Session object is needed 
+Session is an interface 
+SessionFactory will now create an object of the session
+
+Configuration class -> provide -> SessionFactory -> provide -> Session 
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/hbdemo</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+	</session-factory>
+</hibernate-configuration>
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

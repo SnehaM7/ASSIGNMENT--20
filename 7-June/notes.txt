@@ -1,0 +1,35 @@
+Session management:
+
+Session: is used to maintain the state of a user throughout the application
+If there are multiple servlets and JSPs and if we need certain data that can be used across them 
+
+Login and Logout:
+
+Login:
+1. Username and Password are compared
+2. If credentials got matched:
+   Start a session
+   Put the data for logged in user into the session
+   If credentials didn't matched:
+   Redirect a user back to login page
+
+Logout:
+1. Terminate the session then redirect a user to login page
+
+Profile:
+First We need to check if the session is there or not 
+If session is found, then user is logged in and fetch the profile details
+If session not found, user has arrived on this page without login so redirect a user back to login page
+
+
+MyOrders:
+
+
+
+
+
+
+
+
+
+
