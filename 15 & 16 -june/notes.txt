@@ -1,0 +1,92 @@
+Web applications using spring framework:
+
+Servlet and JSPs
+
+MVC : Separation of concerns
+
+
+Controllers -> Servlets
+
+/students
+/students/1
+
+class StudentController extends HttpServlet{
+	service(){
+
+	}
+	doGet(){
+		
+	}
+}
+
+Spring MVC: provides an architecture to create MVC applications
+
+
+client -> web.xml -> LoginServlet
+                     AddServlet
+                     AddProduct
+
+
+client -> web.xml -> FrontController(DispatcherServlet) -> @Controller annotated classes 
+
+In Spring mvc, we have already created servlet that will be executed first
+this is a controller that will be executed first
+DispatcherServlet 
+
+
+
+In Spring mvc, we don't need to create multiple servlets instead of them we will be creating multiple controllers
+
+@Controller
+class StudentController{
+
+}
+
+created java folder in src/main dir
+Added apache tomcat as the targeted runtime
+
+
+After redirecting all the requests to DispatcherServlet in web.xml
+We have to configure DispatcherServlet for searching our controllers
+we have to create a config xml file for the same
+name of file -> {servlet-name}-servlet.xml
+for eg: servlet-name is frontcontroller the filename will be frontcontroller-servlet.xml
+	dispatcher -> dispatcher-servlet.xml
+
+Note: Any controller method should return a proper response 
+	-> json response
+        -> page in the response
+
+ModelAndView class is used to send some data along with redirection on the view
+
+InternalResourceViewResolver -> using this class, we can configure the extension of the view technology that we are using in the project
+
+@Component-> special cases of the same annotation:
+@Repository -> applied on a class in which db related operations are there
+@Service -> applied on a class in which business logic is there
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

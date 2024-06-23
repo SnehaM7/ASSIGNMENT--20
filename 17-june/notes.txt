@@ -1,0 +1,44 @@
+FileUpload:
+
+blob clob
+
+product:
+id name price qty image
+          
+
+We should not store files directly into the db
+We should upload a file into a folder and store its name/path into the database
+     
+content delivery network
+cloud service
+for eg: amazon s3 bucket
+
+Spring 6: don't need any dependency for fileupload
+
+Spring < 6 : add two dependencies :
+	     commons-io, commons-fileupload
+<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.11.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+<dependency>
+    <groupId>commons-fileupload</groupId>
+    <artifactId>commons-fileupload</artifactId>
+    <version>1.5</version>
+</dependency>
+
+dispatcher-servlet.xml
+
+
+
+<form action="" method="post" enctype="multipart/form-data">
+<input type="file" name="myfile">
+</form>
+
+org.springframework.web.multipart.commons.CommonMultipartResolver
+
+
+

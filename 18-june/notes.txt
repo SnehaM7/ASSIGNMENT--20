@@ -1,0 +1,133 @@
+packages:
+
+model
+repository/dao
+repositoryimpl/daoimpl
+
+
+User and Product
+User.java
+Product.java
+
+Repository/dao:
+CRUD
+interface GenericRepository<T>{
+	Integer save(T t);
+	List<T> findAll();
+	T findById(int id);
+	void deleteById(int id);
+}
+
+interface UserRepository extends GenericRepository<User>{
+
+}
+
+interace ProductRepository extends GenericRepository<Product>{
+	
+}
+
+
+JpaRepository
+
+
+
+return list;
+
+{
+	count:2,
+	products:[{},{},{}]
+}
+200 OK
+
+
+{message:'No products available currently'}
+404 not found
+
+
+ResponseEntity
+
+
+1 lac products
+pagination
+
+class User{
+
+private int id;
+String name;
+int age;
+Boolean online;
+}
+
+
+List<User> findByName(String name);
+
+List<User> findTop10ByName(String name);
+
+List<User> findByNameIsNull();
+
+List<User> findByNameIsNotNull();
+
+List<User> findByOnlineTrue();
+
+List<User> findByNameStartingWith(String name);
+
+List<User> findByNameEndingWith(String name);
+
+List<User> findByNameContaining(String name);
+
+List<User> findByNameLike(String pattern); ("a%")
+
+List<User> findByAgeLessThan(Integer age);
+
+List<User> findByAgeLessThanEqual(Integer age);
+
+List<User> findByAgeGreaterThan(Integer age);
+
+List<User> findByAgeGreaterThanEqual(Integer age);
+
+List<User> findByAgeBetween(Integer startAge, Integer endAge);
+
+List<User> findByNameOrAge(String name, Integer age);
+
+List<User> findByNameOrAgeAndOnline(String name, Integer age, Boolean online);
+
+List<User> findByNameOrderByAge(String name);
+
+List<User> findByNameOrderByAgeDesc(String name);
+
+@Query("SELECT u FROM User u WHERE u.online=1") JPQL
+List<User> findOnlineUsers();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
