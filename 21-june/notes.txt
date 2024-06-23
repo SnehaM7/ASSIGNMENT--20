@@ -1,0 +1,17 @@
+internationalization / localization : making our application usable into any location on the globe
+
+for that purpose we must have to respond with the local language
+
+i18n
+
+
+url 
+body
+
+we have to pass selected lang in the request header
+Accept-Language
+
+
+
+
+
